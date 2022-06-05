@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Контакты | Любимовка";
+  }, []);
   return <div>Contact</div>;
 };
 

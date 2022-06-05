@@ -1,14 +1,72 @@
-.navBarLink {
-  transition: .4s;
+@use "../../variables.scss";
 
-  &.logoLink {
-    background-image: url(../../assets/love.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.NavBar {
+  width: 100%;
+  padding: 9px 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: variables.$main-background;
+  justify-content: space-around;
+  border-bottom: 1px solid variables.$black;
 
-  &.logoLink:hover {
-    transform: scale(1.1);
+  &__link {
+    font-family: "Formular Light", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    font-size: 16px;
+    min-width: 100px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: variables.$black;
+
+    .border {
+      display: inline-block;
+      width: 10px;
+      height: 24px;
+      visibility: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &.borderLeft {
+        background-image: url(../../assets/leftBorder.svg);
+      }
+
+      &.borderRight {
+
+        background-image: url(../../assets/rightBorder.svg);
+      }
+    }
+
+
+    &.active:not(.logoLink) {
+      // color: rgb(255, 93, 93);
+
+      .borderLeft {
+        visibility: visible;
+      }
+
+      .borderRight {
+        visibility: visible;
+      }
+    }
+
+    &.logoLink {
+      background-image: url(../../assets/love.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &.logoLink:hover {
+      // transform: scale(1.1);
+
+    }
+
+    &:hover:not(.active) {
+      // color: variables.$purple;
+    }
   }
 }

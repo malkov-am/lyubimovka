@@ -1,52 +1,39 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
 import "./NavBar.scss";
 
 // import logoSrc from "../../assets/love.svg";
+interface ILink {
+  link: string;
+  className: string;
+  title: string;
+  id: number;
+}
+const links: ILink[] = [
+  { link: "/", className: "logoLink", title: "", id: 0 },
+  { link: "playbill", className: "", title: "Афиша", id: 1 },
+  { link: "library", className: "", title: "Библиотека", id: 2 },
+  { link: "projects", className: "", title: "Проекты", id: 3 },
+  { link: "history", className: "", title: "История", id: 4 },
+  { link: "blog", className: "", title: "Блог", id: 5 },
+  { link: "about", className: "", title: "О фестивале", id: 6 },
+  { link: "contact", className: "", title: "Контакты", id: 7 },
+  { link: "support", className: "", title: "+Поддержать", id: 8 },
+];
 
 const NavBar = () => {
   return (
-    <NavBarWrapper>
-      {/* TODO : тестовый компонент, переделать */}
-      <StyledLink to="/" className={"navBarLink logoLink"}></StyledLink>
-      <StyledLink to="playbill">Афиша</StyledLink>
-      <StyledLink to="library">Библиотека</StyledLink>
-      <StyledLink to="projects">Проекты</StyledLink>
-      <StyledLink to="history">История</StyledLink>
-      <StyledLink to="blog">Блог</StyledLink>
-      <StyledLink to="about">О фестивале</StyledLink>
-      <StyledLink to="contact">Контакты</StyledLink>
-      {/* обычные ссылки на соцсети */}
-      <StyledLink to="support">+Поддержать</StyledLink>
-    </NavBarWrapper>
+    <nav className="NavBar">
+      {links.map((item) => {
+        return (
+          <NavLink key={item.id} to={item.link} className={`NavBar__link ${item.className}`}>
+            <div className="border borderLeft"></div>
+            {item.title}
+            <div className="border borderRight"></div>
+          </NavLink>
+        );
+      })}
+    </nav>
   );
 };
-//  className={({ isActive }) => (isActive ? "a" : "b")}
-// .attrs({ activeClassname: "anyClassName" })
+
 export default NavBar;
-
-const NavBarWrapper = styled.nav`
-  width: 100%;
-  padding: 10px 0;
-  display: flex;
-  flex-wrap: wrap;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  background-color: antiquewhite;
-  justify-content: space-around;
-`;
-const StyledLink = styled(NavLink)`
-  font-size: 16px;
-  min-width: 100px;
-  padding: 5px 0;
-  text-decoration: none;
-  color: black;
-
-  &:hover {
-    color: #7434fd;
-  }
-
-  &.active {
-    color: red;
-  }
-`;
