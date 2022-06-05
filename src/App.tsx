@@ -30,7 +30,7 @@ const routes: IRoute[] = [
   { path: "/about", Component: About },
   { path: "/contact", Component: Contact },
   { path: "/support", Component: Support },
-  { path: "/400", Component: Page404 },
+  { path: "*", Component: Page404 },
   { path: "/500", Component: Page500 },
 ];
 

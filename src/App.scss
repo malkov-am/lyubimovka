@@ -2,10 +2,12 @@
 
 .App {
   font-family: "Neue Machina";
-  min-height: 100vh;
+  // min-height: 100vh;
   text-align: center;
   background-color: variables.$main-background;
   color: variables.$black;
+  margin: 0;
+  padding: 0;
 }
 
 .App-link {

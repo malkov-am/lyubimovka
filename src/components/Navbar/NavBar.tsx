@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
+import NavSocials from "./NavSocials";
 
 // import logoSrc from "../../assets/love.svg";
 interface ILink {
@@ -17,7 +18,7 @@ const links: ILink[] = [
   { link: "blog", className: "", title: "Блог", id: 5 },
   { link: "about", className: "", title: "О фестивале", id: 6 },
   { link: "contact", className: "", title: "Контакты", id: 7 },
-  { link: "support", className: "", title: "+Поддержать", id: 8 },
+  // { link: "support", className: "", title: "+Поддержать", id: 8 },
 ];
 
 const NavBar = () => {
@@ -32,6 +33,12 @@ const NavBar = () => {
           </NavLink>
         );
       })}
+      <NavSocials />
+      <NavLink to={"support"} className={`NavBar__link`}>
+        <div className="border borderLeft"></div>
+        +Поддержать
+        <div className="border borderRight"></div>
+      </NavLink>
     </nav>
   );
 };
