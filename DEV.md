@@ -27,7 +27,7 @@
   : Базовая папка с компонентами
 
 - <img src="./src/assets/folder.svg" alt="drawing" width="12"/> componets/UI
-  : компоненты без уникальной логики, которые повторяются на нескольких страницах,напримпер кнопки
+  : компоненты без уникальной логики, которые повторяются на нескольких страницах,напримпер кнопки [Вот эти кнопки надо сюда](https://www.figma.com/proto/zpyHTGb3aKiAbpJJoIVqQ2/lubimovka?page-id=822%3A11417&node-id=828%3A12265&viewport=11728%2C2764%2C1.1076146364212036&scaling=min-zoom&starting-point-node-id=859%3A13873&hide-ui=1)
 
 - <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **hooks**
   : кастомные хуки
