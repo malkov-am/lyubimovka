@@ -2,7 +2,7 @@
 
 ## Стек, на котором будем разрабатывать:
 
-Основа: _`React, TypeScript, Redux(Redux Toolkit), styled-components`_
+Основа: _`React, TypeScript, Redux(Redux Toolkit), (styled-components либо же Sass(Scss))`_
 Плюс, возможно, более мелкие библиотеки вроде _`React Transiton Group`_ для анимаций, _`React Router`_ для роутинга между страницами и т.д.
 Если доживем до бекенда, то _`express` или `Nest`_, а пока можно юзать JSON Placeholder.
 
