@@ -1,0 +1,14 @@
+.navBarLink {
+  transition: .4s;
+
+  &.logoLink {
+    background-image: url(../../assets/love.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.logoLink:hover {
+    transform: scale(1.1);
+  }
+}
