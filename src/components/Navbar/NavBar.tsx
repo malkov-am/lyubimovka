@@ -1,21 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <NavBarWrapper>
       {/* TODO : тестовый компонент, переделать */}
-      <StyledLink to="test1">1</StyledLink>
-      <StyledLink to="test2">2</StyledLink>
-      <StyledLink to="main">Main</StyledLink>
-      <StyledLink to="about/page">About</StyledLink>
-      <StyledLink to="news">News</StyledLink>
+      <StyledLink to="/"> {"<3"} </StyledLink>
+      <StyledLink to="playbill">Афиша</StyledLink>
+      <StyledLink to="library">Библиотека</StyledLink>
+      <StyledLink to="projects">Проекты</StyledLink>
+      <StyledLink to="history">История</StyledLink>
+      <StyledLink to="blog">Блог</StyledLink>
+      <StyledLink to="about">О фестивале</StyledLink>
+      <StyledLink to="contact">Контакты</StyledLink>
+      {/* обычные ссылки на соцсети */}
+      <StyledLink to="support">+Поддержать</StyledLink>
     </NavBarWrapper>
   );
 };
-
+//  className={({ isActive }) => (isActive ? "a" : "b")}
+// .attrs({ activeClassname: "anyClassName" })
 export default NavBar;
 
 const NavBarWrapper = styled.nav`
@@ -30,4 +35,9 @@ const StyledLink = styled(NavLink)`
   font-size: 20px;
   min-width: 100px;
   text-decoration: none;
+  color: black;
+
+  &.active {
+    color: red;
+  }
 `;
