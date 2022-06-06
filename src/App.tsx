@@ -15,21 +15,23 @@ import Projects from "./pages/Projects";
 import Support from "./pages/Support";
 // import { CSSTransition } from "react-transition-group";
 import "./assets/fonts/fonts.css";
+import Footer from "./components/Footer/Footer";
 interface IRoute {
   path: string;
+  name?: string;
   Component: React.ComponentType;
 }
 const routes: IRoute[] = [
-  { path: "/", Component: Main },
-  { path: "/playbill", Component: Playbill },
-  { path: "/library", Component: Library },
-  { path: "/projects", Component: Projects },
-  { path: "/history", Component: History },
-  { path: "/blog", Component: Blog },
-  { path: "/news", Component: News },
-  { path: "/about", Component: About },
-  { path: "/contact", Component: Contact },
-  { path: "/support", Component: Support },
+  { path: "/", name: "Любимовка", Component: Main },
+  { path: "/playbill", name: "Афиша", Component: Playbill },
+  { path: "/library", name: "Библиотека", Component: Library },
+  { path: "/projects", name: "Проекты", Component: Projects },
+  { path: "/history", name: "История", Component: History },
+  { path: "/blog", name: "Блог", Component: Blog },
+  { path: "/news", name: "Новости", Component: News },
+  { path: "/about", name: "О фестивале", Component: About },
+  { path: "/contact", name: "Контакты", Component: Contact },
+  { path: "/support", name: "Поддержка", Component: Support },
   { path: "*", Component: Page404 },
   { path: "/500", Component: Page500 },
 ];
@@ -43,6 +45,7 @@ function App() {
           <Route key={path} path={path} element={<Component />} />
         ))}
       </Routes>
+      <Footer />
     </div>
   );
 }
