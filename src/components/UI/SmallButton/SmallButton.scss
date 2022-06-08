@@ -8,6 +8,11 @@
   line-height: 14px;
   border: none;
 
+  &__fullWidth {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   color: black;
   text-transform: uppercase;
   padding: 5px 30px 5px 30px;
@@ -48,7 +53,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 2;
     min-height: 20px;
     width: 20px;
     height: 31px;
@@ -122,6 +127,12 @@
     }
   }
 
+  & {
+    &.backOk::before {
+      background-image: url(../../../assets/ok.svg);
+    }
+  }
+
 
   &:hover {
     background-position: -75% 0%;
@@ -133,6 +144,10 @@
 
     &.backPlus::before {
       background-image: url("../../../assets/plusWhite.svg");
+    }
+
+    &.backOk::-ms-ticks-before {
+      background-image: url("../../../assets/ok-white.svg");
     }
   }
 }

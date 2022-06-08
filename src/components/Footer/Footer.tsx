@@ -2,18 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 import "./FooterWide.scss";
-const pfqwf = [
-  { path: "/", name: "Любимовка" },
-  { path: "/playbill", name: "Афиша" },
-  { path: "/library", name: "Библиотека" },
-  { path: "/projects", name: "Проекты" },
-  { path: "/history", name: "История" },
-  { path: "/blog", name: "Блог" },
-  { path: "/news", name: "Новости" },
-  { path: "/about", name: "О фестивале" },
-  { path: "/contact", name: "Контакты" },
-  { path: "/support", name: "Поддержка" },
-];
 
 const Footer = () => {
   return (

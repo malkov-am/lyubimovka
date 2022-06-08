@@ -6,7 +6,6 @@ interface ISliderArr {
 }
 
 const SliderArr = (props: ISliderArr) => {
-  //swiper-button-prev swiper-button-disabled
   return (
     <div className={`SliderArr ${props.className || ""} swiper-button-${props.direction}`}></div>
   );

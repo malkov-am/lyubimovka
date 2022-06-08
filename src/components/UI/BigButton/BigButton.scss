@@ -18,6 +18,11 @@
   transition-delay: .2s;
   transition-timing-function: cubic-bezier(.08, .12, .98, .46);
 
+  &__fullWidth {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   &.top {
     border-top: 1px solid variables.$black;
   }
@@ -97,12 +102,33 @@
     }
   }
 
+  & {
+    &.backPlus::before {
+      background-image: url(../../../assets/plus.svg);
+    }
+  }
+
+  & {
+    &.backOk::before {
+      background-image: url(../../../assets/ok.svg);
+    }
+  }
+
+
   &:hover {
     background-position: -75% 0%;
     color: variables.$main-background;
 
     &::before {
       background-image: url("../../../assets/arrow-white.svg");
+    }
+
+    &.backPlus::before {
+      background-image: url("../../../assets/plusWhite.svg");
+    }
+
+    &.backOk::before {
+      background-image: url("../../../assets/ok-white.svg");
     }
   }
 }
