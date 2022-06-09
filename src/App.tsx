@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import "./App.scss";
 import NavBar from "./components/Navbar/NavBar";
 import Page404 from "./pages/404";
@@ -37,15 +37,17 @@ const routes: IRoute[] = [
 ];
 
 function App() {
+  const location = useLocation();
+  console.log("LOCATION", location);
   return (
     <div className="App">
-      <NavBar />
+      {location.pathname !== "/*" ? <NavBar /> : ""}
       <Routes>
         {routes.map(({ path, Component }) => (
           <Route key={path} path={path} element={<Component />} />
         ))}
       </Routes>
-      <Footer />
+      {location.pathname !== "/*" ? <Footer /> : ""}
     </div>
   );
 }

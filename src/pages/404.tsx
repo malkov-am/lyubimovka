@@ -6,6 +6,7 @@ import SliderPoint from "../components/UI/SliderControls/SliderPoint";
 import Loader from "../components/UI/Loader/Loader";
 import SelectLove from "../components/UI/Select/SelectLove";
 import InputLove from "../components/UI/Input/InputLove";
+import "./404.scss";
 
 const selectOptions = [
   { value: "0", label: "Январь" },
@@ -35,6 +36,7 @@ const Page404 = () => {
   useEffect(() => {
     document.title = "404 | Любимовка";
   }, []);
+
   return (
     <div
       style={{
@@ -44,6 +46,7 @@ const Page404 = () => {
         gap: "20px",
         padding: "10px",
       }}
+      className="page404"
     >
       <span style={{ color: "red", fontWeight: "bold" }}>--LOADER--</span>
       <Loader size={50} />
@@ -127,6 +130,28 @@ const Page404 = () => {
           Отправить
         </SmallButton>
       </form>
+      <div className="wrapper-spinner">
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+        <div className="wrapper-spinner__image"></div>
+      </div>
     </div>
   );
 };

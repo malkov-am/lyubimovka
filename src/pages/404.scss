@@ -1,0 +1,22 @@
+.page404 {
+  overflow: hidden;
+}
+
+.wrapper-spinner {
+  position: relative;
+  display: flex;
+  transform: rotate(10deg);
+  border: 1px solid black;
+
+  background-repeat: repeat-x;
+  width: 200vw;
+  height: 50px;
+
+  &__image {
+    background-image: url("../assets/404.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 50px;
+  }
+}
