@@ -38,16 +38,7 @@ const Page404 = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "20px",
-        padding: "10px",
-      }}
-      className="page404"
-    >
+    <div className="page404">
       <span style={{ color: "red", fontWeight: "bold" }}>--LOADER--</span>
       <Loader size={50} />
       <span style={{ color: "red", fontWeight: "bold" }}>--SMALL BUTTONS--</span>
@@ -130,27 +121,53 @@ const Page404 = () => {
           Отправить
         </SmallButton>
       </form>
-      <div className="wrapper-spinner">
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
-        <div className="wrapper-spinner__image"></div>
+      <div className="rotated-wrapper">
+        <div className="wrapper-spinner">
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+        </div>
+      </div>
+      <div className="rotated-wrapper deg10">
+        <div className="wrapper-spinner">
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+          <div className="wrapper-spinner__image"></div>
+        </div>
       </div>
     </div>
   );
