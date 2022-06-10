@@ -19,6 +19,8 @@ interface ISelectLove {
   options: object[]; // варианты селекта
   placeholder: string;
   isMulti?: boolean; // Использовать множественный выбор
+  onChange?: any;
+  defaultValue?: any;
 }
 
 const SelectLove = (props: ISelectLove) => {
@@ -30,6 +32,8 @@ const SelectLove = (props: ISelectLove) => {
       className="SelectLove"
       classNamePrefix={"SelectLove"}
       isMulti={props.isMulti}
+      onChange={props.onChange}
+      defaultValue={props.defaultValue}
     />
   );
 };
