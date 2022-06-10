@@ -44,6 +44,7 @@
   &__date-select {
     display: grid;
     grid-template-columns: 240px 150px;
+    grid-template-rows: min-content;
     gap: 30px;
 
     @media screen and (max-width: 1024px) {
