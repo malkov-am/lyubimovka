@@ -9,6 +9,7 @@ interface ICardData {
   author: string;
   title: string;
   description: string;
+  creationDate: object,
 }
 
 const BlogCard = ({

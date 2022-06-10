@@ -1,13 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import BlogCard from "../components/BlogCard/BlogCard";
 import "./Blog.scss";
 import cardData from "../components/BlogCard/cardData.js";
+import SelectLove from "../components/UI/Select/SelectLove";
 const asteriskPath = require("../assets/asterisk.svg").default;
 
 const Blog = () => {
+  // Переменная состояния селектора даты
+  const [selectedDate, setSelectedDate] = useState({
+    month: "5",
+    year: "2022",
+  });
+  // Опции выбора даты
+  const selectMonth = [
+    { month: "0", label: "Январь" },
+    { month: "1", label: "Февраль" },
+    { month: "2", label: "Март" },
+    { month: "3", label: "Апрель" },
+    { month: "4", label: "Май" },
+    { month: "5", label: "Июнь" },
+    { month: "6", label: "Июль" },
+    { month: "7", label: "Август" },
+    { month: "8", label: "Сентябрь" },
+    { month: "9", label: "Октябрь" },
+    { month: "10", label: "Ноябрь" },
+    { month: "11", label: "Декабрь" },
+  ];
+
+  const selectYear = [{ year: "2022", label: "2022" }];
+  // Обработчик выбора даты
+  function setSelectedDateHandler(evt: any) {
+    setSelectedDate({ ...selectedDate, ...evt });
+  }
+  // Обновление заголовка при загрузке страницы
   useEffect(() => {
     document.title = "Блог | Любимовка";
   }, []);
+  // Фильтрация массива карточек по дате
+  const filteredCardList = cardData.filter(
+    (cardData) =>
+      cardData.creationDate.month === selectedDate.month &&
+      cardData.creationDate.year === selectedDate.year
+  );
+
   return (
     <div className='blog'>
       <div className='blog__header-container'>
@@ -29,13 +64,31 @@ const Blog = () => {
             </a>
           </p>
         </div>
-        <h1 className='blog__header'>Блог Любимовки</h1>
+        <h1 className='blog__title'>Блог Любимовки</h1>
+        <div className='blog__date-select'>
+          <SelectLove
+            options={selectMonth}
+            defaultValue={selectMonth[5]}
+            placeholder='Месяц'
+            onChange={setSelectedDateHandler}
+          />
+          <SelectLove
+            options={selectYear}
+            defaultValue={selectYear[0]}
+            placeholder='Год'
+            onChange={setSelectedDateHandler}
+          />
+        </div>
       </div>
-      <div className='blog__card-container'>
-        {cardData.map((cardData) => (
-          <BlogCard {...cardData} key={cardData.id} />
-        ))}
-      </div>
+      {filteredCardList.length === 0 ? (
+        <p className='notice__text'>Нет статей на выбранную дату</p>
+      ) : (
+        <div className='blog__card-container'>
+          {filteredCardList.map((cardData) => (
+            <BlogCard {...cardData} key={cardData.id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
