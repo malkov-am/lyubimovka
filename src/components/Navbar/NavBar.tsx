@@ -1,14 +1,16 @@
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "./NavBar.scss";
-import NavSocials from "./NavSocials";
+import NavBarDesktop from "./NavBarDesktop";
+import NavBarMobile from "./NavBarMobile";
 
 // import logoSrc from "../../assets/love.svg";
-interface ILink {
+export interface ILink {
   link: string;
   className: string;
   title: string;
   id: number;
 }
+
 const links: ILink[] = [
   { link: "/", className: "logoLink", title: "", id: 0 },
   { link: "playbill", className: "", title: "Афиша", id: 1 },
@@ -21,26 +23,15 @@ const links: ILink[] = [
   // { link: "support", className: "", title: "+Поддержать", id: 8 },
 ];
 
-const NavBar = () => {
-  return (
-    <nav className="NavBar">
-      {links.map((item) => {
-        return (
-          <NavLink key={item.id} to={item.link} className={`NavBar__link ${item.className}`}>
-            <div className="border borderLeft"></div>
-            {item.title}
-            <div className="border borderRight"></div>
-          </NavLink>
-        );
-      })}
-      <NavSocials />
-      <NavLink to={"support"} className={`NavBar__link`}>
-        <div className="border borderLeft"></div>
-        +Поддержать
-        <div className="border borderRight"></div>
-      </NavLink>
-    </nav>
-  );
+const NavBar: React.FC = () => {
+  const [matchScreen, setMatchScreen] = useState(window.matchMedia("(min-width: 700px)").matches);
+  const resizeHandler = (e: any): void => {
+    setMatchScreen(e.matches);
+  };
+  useEffect(() => {
+    window.matchMedia("(min-width: 700px)").addEventListener("change", resizeHandler);
+  }, [matchScreen]);
+  return matchScreen ? <NavBarDesktop links={links} /> : <NavBarMobile links={links} />;
 };
 
 export default NavBar;

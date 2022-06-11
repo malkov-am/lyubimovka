@@ -1,3 +1,4 @@
+import React from "react";
 import "./BigButton.scss";
 
 type arrowDirection =
@@ -19,14 +20,16 @@ interface IBigButton {
   fullWidth?: boolean; // Во всю ширину?
   color: "whiteBack" | "greenBack"; // цвет фона
   backImage?: "backPlus" | "backArrow" | "backOk"; // Фоновое изображение
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const BigButton = (props: IBigButton) => {
+const BigButton: React.FC<IBigButton> = (props) => {
   return (
     <button
       className={`BigButton ${props.className || ""} ${props.borders || ""} ${props.arrDir || ""} ${
         props.color
       } ${props.backImage || ""} ${props.fullWidth ? "BigButton__fullWidth" : ""}`}
+      onClick={props.onClick}
     >
       {props.children}
     </button>

@@ -1,3 +1,4 @@
+import React from "react";
 import "./SmallButton.scss";
 type arrowDirection =
   | "Dtop"
@@ -23,7 +24,7 @@ interface ISmallButton {
   backImage?: "backPlus" | "backArrow" | "backPlus"; // Фоновое изображение
 }
 
-const SmallButton = (props: ISmallButton) => {
+const SmallButton: React.FC<ISmallButton> = (props) => {
   return (
     <button
       className={`SmallButton ${props.className || ""} ${props.borders || ""} ${
