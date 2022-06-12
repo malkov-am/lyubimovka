@@ -50,7 +50,7 @@
   }
 
   &__button {
-    background-image: url("../../assets/burger.svg");
+    background-image: url("../../assets/icons/burger.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: variables.$black;
@@ -65,7 +65,7 @@
     cursor: pointer;
 
     &-opened {
-      background-image: url("../../assets/close-white.svg");
+      background-image: url("../../assets/icons/close-white.svg");
     }
   }
 

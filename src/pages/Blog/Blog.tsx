@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import BlogCard from "../components/BlogCard/BlogCard";
+import BlogCard from "../../components/BlogCard/BlogCard";
 import "./Blog.scss";
-import cardData from "../components/BlogCard/cardData.js";
-import SelectLove from "../components/UI/Select/SelectLove";
-const asteriskPath = require("../assets/asterisk.svg").default;
+import cardData from "../../components/BlogCard/cardData.js";
+import SelectLove from "../../components/UI/Select/SelectLove";
+const asteriskPath = require("../../assets/icons/asterisk.svg").default;
 
 const Blog = () => {
   // Переменная состояния селектора даты
@@ -44,46 +44,41 @@ const Blog = () => {
   );
 
   return (
-    <div className='blog'>
-      <div className='blog__header-container'>
-        <div className='notice'>
-          <p className='notice__text'>
-            Журналисты, театроведы, критики, искусствоведы и студенты профильных
-            вузов ведут журнал фестиваля Любимовка под руководством Натальи
-            Дубашинской и Полины Пхор.
+    <div className="blog">
+      <div className="blog__header-container">
+        <div className="notice">
+          <p className="notice__text">
+            Журналисты, театроведы, критики, искусствоведы и студенты профильных вузов ведут журнал
+            фестиваля Любимовка под руководством Натальи Дубашинской и Полины Пхор.
           </p>
-          <img
-            className='notice__asterisk'
-            src={asteriskPath}
-            alt='Примечание'
-          />
-          <p className='notice__contact'>
+          <img className="notice__asterisk" src={asteriskPath} alt="Примечание" />
+          <p className="notice__contact">
             Если вы хотите стать автором, пишите на{" "}
-            <a className='notice__link' href='mailto:critics@lubimovka.ru'>
+            <a className="notice__link" href="mailto:critics@lubimovka.ru">
               critics@lubimovka.ru
             </a>
           </p>
         </div>
-        <h1 className='blog__title'>Блог Любимовки</h1>
-        <div className='blog__date-select'>
+        <h1 className="blog__title">Блог Любимовки</h1>
+        <div className="blog__date-select">
           <SelectLove
             options={selectMonth}
             defaultValue={selectMonth[5]}
-            placeholder='Месяц'
+            placeholder="Месяц"
             onChange={setSelectedDateHandler}
           />
           <SelectLove
             options={selectYear}
             defaultValue={selectYear[0]}
-            placeholder='Год'
+            placeholder="Год"
             onChange={setSelectedDateHandler}
           />
         </div>
       </div>
       {filteredCardList.length === 0 ? (
-        <p className='notice__text'>Нет статей на выбранную дату</p>
+        <p className="notice__text">Нет статей на выбранную дату</p>
       ) : (
-        <div className='blog__card-container'>
+        <div className="blog__card-container">
           {filteredCardList.map((cardData) => (
             <BlogCard {...cardData} key={cardData.id} />
           ))}

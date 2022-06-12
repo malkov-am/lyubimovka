@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import SmallButton from "../components/UI/SmallButton/SmallButton";
-import BigButton from "../components/UI/BigButton/BigButton";
-import SliderArr from "../components/UI/SliderControls/SliderArr";
-import SliderPoint from "../components/UI/SliderControls/SliderPoint";
-import Loader from "../components/UI/Loader/Loader";
-import SelectLove from "../components/UI/Select/SelectLove";
-import InputLove from "../components/UI/Input/InputLove";
+import SmallButton from "../../components/UI/SmallButton/SmallButton";
+import BigButton from "../../components/UI/BigButton/BigButton";
+import SliderArr from "../../components/UI/SliderControls/SliderArr";
+import SliderPoint from "../../components/UI/SliderControls/SliderPoint";
+import Loader from "../../components/UI/Loader/Loader";
+import SelectLove from "../../components/UI/Select/SelectLove";
+import InputLove from "../../components/UI/Input/InputLove";
 import "./404.scss";
 
 const selectOptions = [

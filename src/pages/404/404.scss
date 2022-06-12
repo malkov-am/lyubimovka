@@ -1,4 +1,4 @@
-@use "../variables.scss";
+@use "../../variables.scss";
 
 .page404 {
   overflow: hidden;
@@ -45,7 +45,7 @@
 
 
   &__image {
-    background-image: url("../assets/404.svg");
+    background-image: url("../../assets/icons/404.svg");
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: border-box;

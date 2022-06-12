@@ -58,13 +58,13 @@
       opacity: 0;
 
       &.borderLeft {
-        background-image: url(../../assets/leftBorder.svg);
+        background-image: url("../../assets/icons/leftBorder.svg");
         transform: translateX(-5px);
       }
 
       &.borderRight {
 
-        background-image: url(../../assets/rightBorder.svg);
+        background-image: url("../../assets/icons/rightBorder.svg");
         transform: translateX(5px);
       }
     }
@@ -88,7 +88,7 @@
     }
 
     &.logoLink {
-      background-image: url(../../assets/love.svg);
+      background-image: url("../../assets/icons/love.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 43px 35px;

@@ -73,19 +73,19 @@ const Footer = () => {
           <p className="footer__sponsors-title">Генеральные спонсоры</p>
           <div className="footer__sponsors-figures">
             <figure>
-              <img src={require("../../assets/prohorov2.png")} alt=""></img>
+              <img src={require("../../assets/footer/prohorov2.png")} alt=""></img>
               <figcaption>Генеральный партнёр</figcaption>
             </figure>
             <figure>
-              <img src={require("../../assets/mosbrew2.png")} alt=""></img>
+              <img src={require("../../assets/footer/mosbrew2.png")} alt=""></img>
               <figcaption></figcaption>
             </figure>
             <figure>
-              <img src={require("../../assets/sbtg.png")} alt=""></img>
+              <img src={require("../../assets/footer/sbtg.png")} alt=""></img>
               <figcaption>Онлайн-трансляции</figcaption>
             </figure>
             <figure>
-              <img src={require("../../assets/apogovorit2.png")} alt=""></img>
+              <img src={require("../../assets/footer/apogovorit2.png")} alt=""></img>
               <figcaption></figcaption>
             </figure>
           </div>

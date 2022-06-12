@@ -40,7 +40,7 @@
   }
 
   &__logo {
-    background-image: url(../../assets/full-logo.svg);
+    background-image: url("../../assets/icons/full-logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -130,7 +130,7 @@
 
     &-designers {
       margin: 0;
-      background-image: url(../../assets/shishki-logo.svg);
+      background-image: url("../../assets/icons/shishki-logo.svg");
       background-repeat: no-repeat;
       background-size: 27px 25px;
       background-position: center left;

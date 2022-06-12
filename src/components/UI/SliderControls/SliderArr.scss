@@ -13,7 +13,7 @@
 
 
   &.swiper-button-prev {
-    background-image: url("../../../assets/arrow-left.svg");
+    background-image: url("../../../assets/icons/arrow-left.svg");
     background-position: center;
     background-size: 20px 13px;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@
     &:hover {
       & {
         background-color: variables.$black;
-        background-image: url("../../../assets/arrow-left-white.svg");
+        background-image: url("../../../assets/icons/arrow-left-white.svg");
       }
 
       &::after {
@@ -71,7 +71,7 @@
   }
 
   &.swiper-button-next {
-    background-image: url("../../../assets/arrow-black.svg");
+    background-image: url("../../../assets/icons/arrow-black.svg");
     background-position: center;
     background-size: 20px 13px;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@
     &:hover {
       & {
         background-color: variables.$black;
-        background-image: url("../../../assets/arrow-white.svg");
+        background-image: url("../../../assets/icons/arrow-white.svg");
       }
 
       &::after {

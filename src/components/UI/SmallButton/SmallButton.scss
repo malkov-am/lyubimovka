@@ -46,7 +46,7 @@
 
   &::before {
     content: " ";
-    background-image: url("../../../assets/arrow-black.svg");
+    background-image: url("../../../assets/icons/arrow-black.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,13 +123,13 @@
   // background-image
   & {
     &.backPlus::before {
-      background-image: url(../../../assets/plus.svg);
+      background-image: url("../../../assets/icons/plus.svg");
     }
   }
 
   & {
     &.backOk::before {
-      background-image: url(../../../assets/ok.svg);
+      background-image: url("../../../assets/icons/ok.svg");
     }
   }
 
@@ -139,15 +139,15 @@
     color: variables.$main-background;
 
     &::before {
-      background-image: url("../../../assets/arrow-white.svg");
+      background-image: url("../../../assets/icons/arrow-white.svg");
     }
 
     &.backPlus::before {
-      background-image: url("../../../assets/plusWhite.svg");
+      background-image: url("../../../assets/icons/plusWhite.svg");
     }
 
     &.backOk::-ms-ticks-before {
-      background-image: url("../../../assets/ok-white.svg");
+      background-image: url("../../../assets/icons/ok-white.svg");
     }
   }
 }

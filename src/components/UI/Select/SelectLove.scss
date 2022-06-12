@@ -132,7 +132,7 @@
     background-size: contain;
     transition: .4s !important;
     transform: rotate(90deg);
-    background-image: url("../../../assets/arrow-black.svg");
+    background-image: url("../../../assets/icons/arrow-black.svg");
     transform: rotate(90deg);
     width: 20px;
     height: 20px;
@@ -142,11 +142,11 @@
   }
 
   &__control--menu-is-open &__dropdown-indicator {
-    background-image: url("../../../assets/arrow-white.svg");
+    background-image: url("../../../assets/icons/arrow-white.svg");
   }
 
   &__control:hover &__dropdown-indicator {
-    background-image: url("../../../assets/arrow-white.svg");
+    background-image: url("../../../assets/icons/arrow-white.svg");
   }
 
   &__indicator-separator {
@@ -175,7 +175,7 @@
 
 
   &-MultiRemove {
-    background-image: url("../../../assets/plusWhite.svg");
+    background-image: url("../../../assets/icons/plusWhite.svg");
     background-size: contain;
     transform: rotate(45deg);
     width: 20px;
