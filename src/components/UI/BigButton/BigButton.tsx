@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import "./BigButton.scss";
 
 type arrowDirection =
@@ -11,25 +11,28 @@ type arrowDirection =
   | "DbottomLeft"
   | "DbottomRight";
 
-interface IBigButton {
-  className?: string; // родительские класснейм
-  children: React.ReactNode; // Имя кнопки
-  // arrPos?: arrowPosition;
+interface IBigButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   arrDir?: arrowDirection; // Поворот фонового изображения
   borders?: string; // перечисление бордеров в строке такого типа : "top bottom left right" Каждое вхождение опционально
   fullWidth?: boolean; // Во всю ширину?
   color: "whiteBack" | "greenBack"; // цвет фона
   backImage?: "backPlus" | "backArrow" | "backOk"; // Фоновое изображение
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const BigButton: React.FC<IBigButton> = (props) => {
+const BigButton: React.FC<IBigButton> = ({
+  arrDir,
+  borders,
+  fullWidth,
+  color,
+  backImage,
+  ...props
+}) => {
   return (
     <button
-      className={`BigButton ${props.className || ""} ${props.borders || ""} ${props.arrDir || ""} ${
-        props.color
-      } ${props.backImage || ""} ${props.fullWidth ? "BigButton__fullWidth" : ""}`}
-      onClick={props.onClick}
+      className={`BigButton ${props.className || ""} ${borders || ""} ${arrDir || ""} ${color} ${
+        backImage || ""
+      } ${fullWidth ? "BigButton__fullWidth" : ""}`}
+      {...props}
     >
       {props.children}
     </button>

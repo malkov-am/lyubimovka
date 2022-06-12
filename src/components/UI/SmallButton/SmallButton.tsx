@@ -11,12 +11,7 @@ type arrowDirection =
   | "DbottomRight";
 type arrowPosition = "Pleft" | "Pright";
 
-interface ISmallButton {
-  className?: string; // родительские класснейм
-  onClick?: React.MouseEventHandler<HTMLButtonElement>; // Функция при клике
-  type: any; // Тип кнопки
-  children: React.ReactNode; // Имя кнопки
-
+interface ISmallButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   borders?: string; // перечисление бордеров в строке такого типа : "top bottom left right" Каждое вхождение опционально
   fullWidth?: boolean; // Во всю ширину?
   arrPos: arrowPosition; // С какой стороны фон
@@ -24,16 +19,20 @@ interface ISmallButton {
   backImage?: "backPlus" | "backArrow" | "backPlus"; // Фоновое изображение
 }
 
-const SmallButton: React.FC<ISmallButton> = (props) => {
+const SmallButton: React.FC<ISmallButton> = ({
+  fullWidth,
+  arrDirection,
+  borders,
+  arrPos,
+  backImage,
+  ...props
+}) => {
   return (
     <button
-      className={`SmallButton ${props.className || ""} ${props.borders || ""} ${
-        props.arrDirection || ""
-      } ${props.arrPos || ""} ${props.backImage || ""} ${
-        props.fullWidth ? "SmallButton__fullWidth" : ""
-      }`}
-      type={props.type}
-      onClick={props.onClick}
+      className={`SmallButton ${props.className || ""} ${borders || ""} ${arrDirection || ""} ${
+        arrPos || ""
+      } ${backImage || ""} ${fullWidth ? "SmallButton__fullWidth" : ""}`}
+      {...props}
     >
       {props.children}
     </button>

@@ -1,8 +1,7 @@
+import React, { HTMLProps } from "react";
 import "./SliderPoint.scss";
-interface ISliderPoint {
-  className?: string;
-}
-const SliderPoint = (props: ISliderPoint) => {
+
+const SliderPoint: React.FC<HTMLProps<HTMLDivElement>> = (props) => {
   return <div className={`${props.className}`}></div>;
 };
 
