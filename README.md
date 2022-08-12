@@ -7,6 +7,9 @@
 ## Описание
 Факультативный проект, созданный в команде со студентами Яндекс-Практикума для получения практического опыта работы в команде разработчиков и опыта разработки реальных проектов.
 
+| [Демо проекта](https://lyubimovka.herokuapp.com/blog) |
+|:----:|
+
 ## При создании сайта использовались следующие технологии:
 - React.js
 - HTML
@@ -25,5 +28,5 @@
 
 ## Состав команды:
 - [klimetzc](https://github.com/klimetzc)
-- [Andrey](https://github.com/UserGitHub37)
+- [UserGitHub37](https://github.com/UserGitHub37)
 - [malkov-am](https://github.com/malkov-am)
